@@ -78,3 +78,4 @@ curl http://localhost:8000/api/v1/wards/1/candidates
 Below is the architecture design for the MyCandidate Flask App:
 
 ![AWS Architecture](doc/DevOps-Technical-Test2025-09-19_113309.png)
+######
