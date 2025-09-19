@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: mycandidate-web
+    ports:
+      - "8000:8000"
+    environment:
+      FLASK_ENV: production
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: supersecretkey
+    restart: unless-stopped
+    depends_on:
+      - redis
+    command: >
+      gunicorn main.app:app
+      --bind 0.0.0.0:8000
+      --workers 2
+      --timeout 120
+
+  redis:
+    image: redis:7-alpine
+    container_name: mycandidate-redis
+    restart: unless-stopped
