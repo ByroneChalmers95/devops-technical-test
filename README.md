@@ -55,3 +55,26 @@ Bonus
 - Thoughtfulness in scaling and cost recommendations
 
 Let us know if you have any questions — Good luck!
+
+#Below From Byrone
+
+## API Endpoints
+
+### Get Candidates by Ward
+**GET** `/api/v1/wards/<ward_id>/candidates`
+
+Returns all candidates for the given ward.
+
+#### Parameters
+- `ward_id` (int): ID of the ward
+
+#### Example Request
+```bash
+curl http://localhost:8000/api/v1/wards/1/candidates
+
+
+### 3. AWS Architecture Design
+
+Below is the architecture design for the MyCandidate Flask App:
+
+![AWS Architecture](doc/DevOps-Technical-Test2025-09-19_113309.png)
